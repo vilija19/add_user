@@ -50,9 +50,9 @@ fi
 
 sudo chown -R $NEW_USER:$NEW_USER /home/$NEW_USER/.ssh/
 
-if [ current_user == 'root' ]; then
-	sudo echo "$NEW_USER  ALL=NOPASSWD: ALL" >> /etc/sudoers
-	  echo "Sudo without password enabled"
+if [ current_user == "root" ]; then
+	echo "$NEW_USER  ALL=NOPASSWD: ALL" | sudo tee /etc/sudoers
+	echo "Sudo without password enabled"
 fi
 
 echo "User $NEW_USER added"
