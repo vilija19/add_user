@@ -50,7 +50,7 @@ fi
 
 sudo chown -R $NEW_USER:$NEW_USER /home/$NEW_USER/.ssh/
 
-echo "$NEW_USER  ALL=NOPASSWD: ALL" | sudo tee /etc/sudoers
+echo "$NEW_USER  ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 echo "Sudo without password enabled"
 
 
